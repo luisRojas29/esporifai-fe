@@ -27,11 +27,11 @@ export const Footer = () => {
         </div>
       </FooterLeft>
       <FooterCenter>
-        <ShuffleIcon />
-        <SkipPreviousIcon />
-        <PlayCircleOutlineIcon />
-        <SkipNextIcon />
-        <RepeatIcon />
+        <ShuffleIcon className="shuffle" />
+        <SkipPreviousIcon className="icon" />
+        <PlayCircleOutlineIcon className="icon" />
+        <SkipNextIcon className="icon" />
+        <RepeatIcon className="repeat" />
       </FooterCenter>
       <FooterRight>
         <Grid container spacing={2}>
