@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
 const SidebarContainer = styled.div`
-  flex: 0.2;
-  height: 100vh;
+  height: 90vh;
   background-color: #000;
-  min-width: 240px;
+  display: flex;
   color: #fff;
+  flex-direction: column;
 
   & img {
-    height: 70px;
-    padding: 10px;
-    margin-right: auto;
+    height: 50px;
+    padding-top: 10px;
   }
+`;
 
-  & hr {
-    border: 1px solid smokegray;
-    width: 90%;
-    margin: 10px auto;
-  }
+const MenuChoices = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const Playlists = styled.div`
@@ -25,18 +24,26 @@ const Playlists = styled.div`
 `;
 
 const Choices = styled.div`
+  border-bottom: 1px solid gray;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: gray;
-  height: 40px;
+  height: 20%;
   cursor: pointer;
   transition: 300ms color ease-in;
   &:hover {
     color: #fff;
   }
-  & h5 {
-    margin: 10px 0 0 20px;
+  &:nth-child(2) {
+    border-right: 5px solid #1da4b9;
+  }
+  &:nth-child(3) {
+    border-right: 5px solid #7d1db9;
+  }
+  &:nth-child(4) {
+    border-right: 5px solid #b9411d;
   }
 `;
 
-export { SidebarContainer, Playlists, Choices };
+export { SidebarContainer, MenuChoices, Playlists, Choices };

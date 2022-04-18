@@ -1,23 +1,29 @@
-import HomeIcon from "@material-ui/icons/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import ListIcon from "@mui/icons-material/List";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
+import SettingsIcon from "@mui/icons-material/Settings";
 import SidebarChoice from "./SidebarChoice";
-import { SidebarContainer, Playlists } from "./styles";
+import { SidebarContainer, MenuChoices } from "./styles";
 
 const Sidebar = () => {
   return (
     <SidebarContainer>
       <img
-        src="https://1000logos.net/wp-content/uploads/2017/08/Spotify-symbol.jpg"
+        src="https://1000logos.net/wp-content/uploads/2021/04/Spotify-logo.png"
         alt="logo"
       />
-      <SidebarChoice title="Home" Icon={HomeIcon} />
-      <SidebarChoice title="Search" Icon={SearchIcon} />
-      <SidebarChoice title="Your Library" Icon={LibraryMusicIcon} />
-      <Playlists>PLAYLISTS</Playlists>
+      <MenuChoices>
+        <SidebarChoice Icon={PersonIcon} />
+        <SidebarChoice Icon={ListIcon} to="/playlists" />
+        <SidebarChoice Icon={SearchIcon} />
+        <SidebarChoice Icon={LibraryMusicIcon} />
+        <SidebarChoice Icon={SettingsIcon} />
+      </MenuChoices>
+      {/* <Playlists>PLAYLISTS</Playlists>
       <hr />
       <SidebarChoice title="2021 ChillOut" />
-      <SidebarChoice title="Dark Metal" />
+      <SidebarChoice title="Dark Metal" /> */}
     </SidebarContainer>
   );
 };

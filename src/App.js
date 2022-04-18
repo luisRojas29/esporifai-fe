@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
@@ -17,12 +17,13 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const hash = getTokenFromURL();
-    const _token = hash.access_token;
+    const _token = getTokenFromURL();
+    console.log("ENTRA A HOME");
+    //const _token = hash.access_token;
 
     if (_token) {
       dispatch(SET_TOKEN(_token));
-      spotify.setAccessToken(hash.access_token);
+      spotify.setAccessToken(_token);
       spotify.getMe().then((user) => dispatch(SET_USER(user)));
       spotify
         .getPlaylist("37i9dQZEVXcTsJf0u0OFNB")
@@ -32,5 +33,5 @@ function App() {
 
   return <div>{user ? <Player /> : <Login />}</div>;
 }
-
+// Refactorizar index.js para que react rouder defina las rutas, siendo App el /
 export default App;

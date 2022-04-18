@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const BodyContainer = styled.div`
-  flex: 0.8;
-  background: linear-gradient(#340034, #000);
+  background: #1da4b9;
   color: #fff;
-  height: 100vh;
+  height: 90vh;
   padding: 30px;
   overflow-y: overlay;
   &::-webkit-scrollbar {

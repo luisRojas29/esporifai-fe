@@ -9,7 +9,6 @@ import SongRow from "./SongRow";
 
 const Body = () => {
   const playlist = useSelector(selectPlaylist);
-  console.log("PL", playlist);
   return (
     <BodyContainer>
       <Header />

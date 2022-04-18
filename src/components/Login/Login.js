@@ -9,7 +9,9 @@ const Login = () => {
         alt="logo"
         className="logo"
       />
-      <LoginButton href={loginURL}>Login with Spotify</LoginButton>
+      <LoginButton href="http://localhost:3001/login">
+        Login with Spotify
+      </LoginButton>
     </LoginContainer>
   );
 };

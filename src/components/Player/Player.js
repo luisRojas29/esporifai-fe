@@ -5,13 +5,11 @@ import { SpotifyBody } from "./styles";
 
 const Player = () => {
   return (
-    <>
-      <SpotifyBody>
-        <Sidebar />
-        <Body />
-      </SpotifyBody>
+    <SpotifyBody>
+      <Sidebar />
+      <Body />
       <Footer />
-    </>
+    </SpotifyBody>
   );
 };
 

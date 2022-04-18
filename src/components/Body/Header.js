@@ -6,7 +6,6 @@ import { selectUser } from "../../features/UserSlice";
 
 const Header = () => {
   const user = useSelector(selectUser);
-  kw;
   return (
     <HeaderContainer>
       <HeaderLeft>

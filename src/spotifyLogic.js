@@ -10,14 +10,15 @@ const scopes = [
 ];
 
 export const getTokenFromURL = () => {
-  return window.location.hash
-    .substring(1)
-    .split("&")
-    .reduce((initial, item) => {
-      let parts = item.split("=");
-      initial[parts[0]] = decodeURIComponent(parts[1]);
-      return initial;
-    }, {});
+  return decodeURIComponent(window.location.search.split("=")[1]);
+  // return window.location.hash
+  //   .substring(1)
+  //   .split("&")
+  //   .reduce((initial, item) => {
+  //     let parts = item.split("=");
+  //     initial[parts[0]] = decodeURIComponent(parts[1]);
+  //     return initial;
+  //   }, {});
 };
 
 export const loginURL = `${endpoint}?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scopes.join(
